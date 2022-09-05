@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: mirror
         id: mirror
-        uses: bridgelightcloud/github-mirror-action@v2
+        uses: n14s/github-mirror-action@v1
         with:
-          origin: 'https://github.com/n14s/blink-break.git'
+          origin: 'https://${{secrets.GITHUB_TOKEN}}@github.com/n14s/blink-break.git'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
